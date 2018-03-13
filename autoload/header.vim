@@ -1,7 +1,3 @@
-" Author            : Mark Bahnman <mark@hackcapital.com>
-" Date              : 13.03.2018
-" Last Modified Date: 13.03.2018
-" Last Modified By  : Mark Bahnman <mark@hackcapital.com>
 " PROPERTIES AND FUNCTIONS FOR GENERAL PURPOSES
 " ---------------------------------------------
 " Set default global values
@@ -34,6 +30,9 @@ if !exists('g:header_max_size')
 endif
 if !exists('g:header_alignment')
     let g:header_alignment = 1
+endif
+if !exists('g:header_field_company')
+    let g:header_field_company = ''
 endif
 
 " Path for license files directory
@@ -264,6 +263,10 @@ fun s:add_header()
         call append(i, b:comment_char . b:field_modified_by . ' ' . g:header_field_author . email)
         let i += 1
     endif
+    if g:header_field_company != ''
+      call append(i, b:comment_char . '@copyright (c) ' . strftime(%Y) . ' ' . g:header_field_company)
+    endif
+
 
     " If filetype supports block comment, close comment
     if b:block_comment
