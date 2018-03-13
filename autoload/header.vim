@@ -1,3 +1,7 @@
+" Author            : Mark Bahnman <mark@hackcapital.com>
+" Date              : 13.03.2018
+" Last Modified Date: 13.03.2018
+" Last Modified By  : Mark Bahnman <mark@hackcapital.com>
 " PROPERTIES AND FUNCTIONS FOR GENERAL PURPOSES
 " ---------------------------------------------
 " Set default global values
@@ -50,11 +54,11 @@ fun s:set_props()
     let b:comment_char = '' " Comment char, or for block comment trailing char of body
     let b:auto_space_after_char = 1 " Put auto space after comment char, if line is not empty
     " Field placeholders according to doc comment syntax, if available
-    let b:field_file = 'File'
-    let b:field_author = 'Author'
-    let b:field_date = 'Date'
-    let b:field_modified_date = 'Last Modified Date'
-    let b:field_modified_by = 'Last Modified By'
+    let b:field_file = '@file'
+    let b:field_author = '@author'
+    let b:field_date = '@date'
+    let b:field_modified_date = '@lastModifiedBy'
+    let b:field_modified_by = '@lastModifiedTime'
     let b:field_separator = ':'
 
     " Setting Values for Languages
