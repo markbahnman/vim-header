@@ -266,7 +266,7 @@ fun s:add_header()
         call append(i, b:comment_char . b:field_modified_by . ' ' . g:header_field_author . email)
         let i += 1
     endif
-    if g:header_file_decription
+    if g:header_file_description
       append(i, b:comment_char)
       append(i+1, b:comment_char . 'FILE DESCRIPTION HERE')
       let i += 2
