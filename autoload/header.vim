@@ -264,8 +264,9 @@ fun s:add_header()
         let i += 1
     endif
     if g:header_field_company != ''
-      call append(i, b:comment_char . '@copyright (c) ' . strftime('%Y') . ' ' . g:header_field_company)
-      let i += 1
+      call append(i, b:comment_char_wo_space)
+      call append(i+1, b:comment_char . '@copyright (c) ' . strftime('%Y') . ' ' . g:header_field_company)
+      let i += 2
     endif
 
 
