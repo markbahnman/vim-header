@@ -31,6 +31,9 @@ endif
 if !exists('g:header_alignment')
     let g:header_alignment = 1
 endif
+if !exists('g:header_file_description')
+    let g:header_file_description = 1
+endif
 if !exists('g:header_field_company')
     let g:header_field_company = ''
 endif
@@ -262,6 +265,11 @@ fun s:add_header()
         endif
         call append(i, b:comment_char . b:field_modified_by . ' ' . g:header_field_author . email)
         let i += 1
+    endif
+    if g:header_file_decription
+      append(i, b:comment_char)
+      append(i+1, b:comment_char . 'FILE DESCRIPTION HERE')
+      let i += 2
     endif
     if g:header_field_company != ''
       call append(i, b:comment_char_wo_space)
