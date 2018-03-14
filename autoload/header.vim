@@ -267,7 +267,7 @@ fun s:add_header()
         let i += 1
     endif
     if g:header_file_description
-      call append(i, b:comment_char)
+      call append(i, b:comment_char_wo_space)
       call append(i+1, b:comment_char . 'FILE DESCRIPTION HERE')
       let i += 2
     endif
