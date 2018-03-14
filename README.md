@@ -105,6 +105,8 @@ Settings related to **headers' fields**:
 - [`g:header_field_modified_timestamp`](#gheader_field_modified_timestamp)
 - [`g:header_field_modified_by`](#gheader_field_modified_by)
 - [`g:header_field_timestamp_format`](#gheader_field_timestamp_format)
+- [`g:header_field_company`](#gheader_field_company)
+- [`g:header_file_description`](#gheader_file_description)
 
 Settings related to **supported filetypes**:
 
@@ -211,6 +213,26 @@ let g:header_field_timestamp_format = '%d.%m.%Y'
 ```
 
 Sets timestamp format. **`%d.%m.%Y` by default**.
+
+g:header_field_company
+----------------------
+
+```vim
+let g:header_field_company = 'Company Name'
+```
+
+Sets the company name to be used for the copyright information. In order for
+the copright line to show up **`g:header_field_company` must be set and not be empty**.
+**'' by default**
+
+g:header_file_description
+-------------------------
+
+```vim
+let g:header_file_description = 0
+```
+
+Adds space below the last modified timestamp for a file description. **1 by default**
 
 g:header_cfg_comment_char
 -------------------------
