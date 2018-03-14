@@ -59,8 +59,8 @@ fun s:set_props()
     let b:field_file = '@file'
     let b:field_author = '@author'
     let b:field_date = '@date'
-    let b:field_modified_date = '@lastModifiedBy'
-    let b:field_modified_by = '@lastModifiedTime'
+    let b:field_modified_date = '@lastModifiedTime'
+    let b:field_modified_by = '@lastModifiedBy'
     let b:field_separator = ':'
 
     " Setting Values for Languages
